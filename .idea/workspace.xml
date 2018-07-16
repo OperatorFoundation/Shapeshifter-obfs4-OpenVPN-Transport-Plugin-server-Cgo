@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ef8579c7-832e-4c84-8446-8f6c1b7290cd" name="Default" comment="" />
+    <list default="true" id="ef8579c7-832e-4c84-8446-8f6c1b7290cd" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +16,8 @@
       <file leaf-file-name="main.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="26" column="68" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
+            <state relative-caret-position="-7">
+              <caret line="56" column="21" lean-forward="true" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
               <folding>
                 <element signature="e#52#220#0" expanded="true" />
               </folding>
@@ -26,7 +28,9 @@
       <file leaf-file-name="obfs4.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../shapeshifter-transports/transports/obfs4/obfs4.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1739" />
+            <state relative-caret-position="122">
+              <caret line="359" column="27" selection-start-line="359" selection-start-column="23" selection-end-line="359" selection-end-column="27" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -39,7 +43,15 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>read</find>
+    </findStrings>
+  </component>
   <component name="GOROOT" path="/usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -57,11 +69,12 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="20" />
+    <option name="x" value="15" />
     <option name="y" value="63" />
     <option name="width" value="1260" />
     <option name="height" value="737" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -73,66 +86,6 @@
             <path>
               <item name="Shapeshifter-obfs4-OpenVPN-Transport-Plugin" type="b2602c69:ProjectViewProjectNode" />
               <item name="Shapeshifter-obfs4-OpenVPN-Transport-Plugin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Shapeshifter-obfs4-OpenVPN-Transport-Plugin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="Shapeshifter-obfs4-OpenVPN-Transport-Plugin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;Shapeshifter-obfs4-OpenVPN-Transport-Plugin&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-            </path>
-            <path>
-              <item name="Shapeshifter-obfs4-OpenVPN-Transport-Plugin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;Shapeshifter-obfs4-OpenVPN-Transport-Plugin&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Shapeshifter-obfs4-OpenVPN-Transport-Plugin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;Shapeshifter-obfs4-OpenVPN-Transport-Plugin&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="github.com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Shapeshifter-obfs4-OpenVPN-Transport-Plugin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;Shapeshifter-obfs4-OpenVPN-Transport-Plugin&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="github.com" type="462c0819:PsiDirectoryNode" />
-              <item name="OperatorFoundation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Shapeshifter-obfs4-OpenVPN-Transport-Plugin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;Shapeshifter-obfs4-OpenVPN-Transport-Plugin&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="github.com" type="462c0819:PsiDirectoryNode" />
-              <item name="OperatorFoundation" type="462c0819:PsiDirectoryNode" />
-              <item name="shapeshifter-transports" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Shapeshifter-obfs4-OpenVPN-Transport-Plugin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;Shapeshifter-obfs4-OpenVPN-Transport-Plugin&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="github.com" type="462c0819:PsiDirectoryNode" />
-              <item name="OperatorFoundation" type="462c0819:PsiDirectoryNode" />
-              <item name="shapeshifter-transports" type="462c0819:PsiDirectoryNode" />
-              <item name="transports" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Shapeshifter-obfs4-OpenVPN-Transport-Plugin" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;Shapeshifter-obfs4-OpenVPN-Transport-Plugin&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="github.com" type="462c0819:PsiDirectoryNode" />
-              <item name="OperatorFoundation" type="462c0819:PsiDirectoryNode" />
-              <item name="shapeshifter-transports" type="462c0819:PsiDirectoryNode" />
-              <item name="transports" type="462c0819:PsiDirectoryNode" />
-              <item name="obfs4" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -177,16 +130,15 @@
     </recent_temporary>
   </component>
   <component name="ToolWindowManager">
-    <frame x="20" y="63" width="1260" height="737" extended-state="0" />
-    <editor active="true" />
+    <frame x="15" y="63" width="1260" height="737" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18015873" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32880846" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -206,16 +158,23 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../shapeshifter-transports/transports/obfs4/obfs4.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1739" />
+        <state relative-caret-position="122">
+          <caret line="359" column="27" selection-start-line="359" selection-start-column="23" selection-end-line="359" selection-end-column="27" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="26" column="68" selection-start-line="26" selection-start-column="68" selection-end-line="26" selection-end-column="68" />
+        <state relative-caret-position="-7">
+          <caret line="56" column="21" lean-forward="true" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
           <folding>
             <element signature="e#52#220#0" expanded="true" />
           </folding>
