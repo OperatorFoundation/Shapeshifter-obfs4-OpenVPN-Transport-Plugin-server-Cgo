@@ -1,4 +1,4 @@
-package Shapeshifter_obfs4_OpenVPN_Transport_Plugin
+package main
 import "C"
 import (
 	"github.com/OperatorFoundation/shapeshifter-transports/transports/obfs4"
