@@ -2,21 +2,21 @@ package main
 
 import "C"
 import (
+	"net"
 	"unsafe"
 
-	"github.com/OperatorFoundation/shapeshifter-transports/transports/base"
 	"github.com/OperatorFoundation/shapeshifter-transports/transports/obfs4"
 )
 
-var transports = map[int]base.Transport{}
-var listeners = map[int]base.TransportListener{}
-var conns = map[int]base.TransportConn{}
+var transports = map[int]*obfs4.Obfs4Transport{}
+var listeners = map[int]net.Listener{}
+var conns = map[int]net.Conn{}
 var nextID = 0
 
 //export Obfs4_initialize_server
 func Obfs4_initialize_server(stateDir *C.char) (listenerKey int) {
 	goStateString := C.GoString(stateDir)
-	var transport base.Transport = obfs4.NewObfs4Server(goStateString)
+	var transport *obfs4.Obfs4Transport = obfs4.NewObfs4Server(goStateString)
 	transports[nextID] = transport
 
 	// This is the return value
@@ -39,7 +39,7 @@ func Obfs4_listen(id int, address_string *C.char) {
 func Obfs4_accept(id int) {
 	var listener = listeners[id]
 
-	conn, err := listener.TransportAccept()
+	conn, err := listener.Accept()
 	if err != nil {
 		return
 	}
