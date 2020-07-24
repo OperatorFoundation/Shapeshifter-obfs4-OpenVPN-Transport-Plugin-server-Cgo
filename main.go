@@ -5,10 +5,10 @@ import (
 	"net"
 	"unsafe"
 
-	"github.com/OperatorFoundation/shapeshifter-transports/transports/obfs4"
+	"github.com/OperatorFoundation/shapeshifter-transports/transports/obfs4/v2"
 )
 
-var transports = map[int]*obfs4.Obfs4Transport{}
+var transports = map[int]*obfs4.Transport{}
 var listeners = map[int]net.Listener{}
 var conns = map[int]net.Conn{}
 var nextID = 0
@@ -16,11 +16,32 @@ var nextID = 0
 //export Obfs4_initialize_server
 func Obfs4_initialize_server(stateDir *C.char) (listenerKey int) {
 	goStateString := C.GoString(stateDir)
-	var transport *obfs4.Obfs4Transport = obfs4.NewObfs4Server(goStateString)
+	transport, _ := obfs4.NewObfs4Server(goStateString)
 	transports[nextID] = transport
 
 	// This is the return value
-	listenerKey = nextID
+	if transport != nil {
+		listenerKey = nextID
+	} else {
+		listenerKey = -1
+	}
+
+	nextID += 1
+	return
+}
+
+//export Obfs4_initialize_client
+func Obfs4_initialize_client(cert *C.char, iatMode int) (listenerKey int) {
+	certString := C.GoString(cert)
+	transport, _ := obfs4.NewObfs4Client(certString, iatMode, nil) // TODO: support dialer
+	transports[nextID] = transport
+
+	// This is the return value
+	if transport != nil {
+		listenerKey = nextID
+	} else {
+		listenerKey = -1
+	}
 
 	nextID += 1
 	return
@@ -33,6 +54,21 @@ func Obfs4_listen(id int, address_string *C.char) {
 	var transport = transports[id]
 	var listener = transport.Listen(goAddressString)
 	listeners[id] = listener
+}
+
+//export Obfs4_dial
+func Obfs4_dial(id int, address_string *C.char) int {
+	goAddressString := C.GoString(address_string)
+
+	var transport = transports[id]
+	var conn, err = transport.Dial(goAddressString)
+
+	if err != nil {
+		return -1
+	} else {
+		conns[id] = conn
+		return 0
+	}
 }
 
 //export Obfs4_accept
