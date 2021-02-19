@@ -49,6 +49,9 @@ func Obfs4_accept(id int) {
 //export Obfs4_write
 func Obfs4_write(listener_id int, buffer unsafe.Pointer, buffer_length C.int) int {
 	var connection = conns[listener_id]
+	if connection == nil {
+		return -1
+	}
 	var bytesBuffer = C.GoBytes(buffer, buffer_length)
 	numberOfBytesWritten, error := connection.Write(bytesBuffer)
 
@@ -64,6 +67,9 @@ func Obfs4_read(listener_id int, buffer unsafe.Pointer, buffer_length C.int) int
 
 	var connection = conns[listener_id]
 	var bytesBuffer = C.GoBytes(buffer, buffer_length)
+	if connection == nil {
+		return -1
+	}
 
 	numberOfBytesRead, error := connection.Read(bytesBuffer)
 
@@ -78,6 +84,9 @@ func Obfs4_read(listener_id int, buffer unsafe.Pointer, buffer_length C.int) int
 func Obfs4_close_connection(listener_id int) {
 
 	var connection = conns[listener_id]
+	if connection == nil {
+		return
+	}
 	connection.Close()
 	delete(conns, listener_id)
 }
